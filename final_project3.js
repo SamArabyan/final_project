@@ -1,27 +1,17 @@
 var namespace = "http://www.w3.org/2000/svg"
 
 // Write your code here!
-function car() {
-  var car=document.querySelector("input[name='car']:checked").value
-  if(car=="Sports"){
-    makeRect(0,0,400,400,"red",1)
-    makeText("150,000", "85", "38", "12", "black", 1.0)
-    makeText("Nissan GTR Nismo", "85", "24", "12", "black", 1.0)
-    makeImage("https://www.nissan-cdn.net/content/dam/Nissan/global/vehicles/gt-r/r35/2_minor_change/overview/17TDIeulhd_GTRHelios026.jpg.ximg.l_full_m.smart.jpg",0,0,200,200)
-  }
-  if (car=="Exotic") {
-    makeRect(0,0,400,400,"red",1)
-    makeText("1,600,000", "85", "30", "12", "black", 1.0)
-    makeText("Koenigsegg Agera r", "85", "18", "12", "black", 1.0)
-    makeImage("http://www.blogcdn.com/www.autoblog.com/media/2012/03/26-koenigsegg-agera-r-geneva.jpg",0,0,200,200)
-  }
-  if (car=="Rare") {
-    makeRect(0,0,400,400,"red",1)
-    makeText("38,100,000", "85", "36", "12", "black", 1.0)
-    makeText("1962 Ferrari 250 GTO", "85", "25", "12", "black", 1.0)
-    makeImage("http://roa.h-cdn.co/assets/cm/14/49/980x598/547fcdb5a3794_-_sf-ferrari-gto-img1-lg.jpg",0,0,200,200)
-  }
-}
+makeImage("http://gtspirit.com/wp-content/uploads/2015/07/Bugatti-Veyron-Super-Sport-30017.jpg",2,10,86,86)
+makeText("Bugatti Veyron",6,23,8,"black",1.0)
+makeImage("http://i.dailymail.co.uk/i/pix/2014/07/19/article-2698255-1FC8E20400000578-422_964x598.jpg",112,10,86,86)
+makeText("275 GTB/C Speciale",115,23,8,"black",1.0)
+makeImage("http://blog.caranddriver.com/wp-content/uploads/2015/03/2016-Lamborghini-Aventador-SV-placement-626x382.jpg",2,120,86,86)
+makeText("lamborghini aventador sv",6,130,8,"black",1.0)
+makeImage("https://static01.nyt.com/images/2009/01/02/automobiles/02wheelsbugatti480.jpg",112,120,87,87)
+makeText("Type 57S",115,130,8,"black",1.0)
+makeText("This car is the most expensive we have and it is the fastest to top speed 300mph.",30,210,5,"black",1.0)
+makeImage("http://www.stancenation.com/wp-content/uploads/2014/05/IMG_6195.jpg",50,200,100,100)
+makeText("it's not :)",155,280,4,"black",1.0)
 // DO NOT EDIT CODE BELOW THIS LINE!
 function getX(shape) {
   if (!shape) {
@@ -129,7 +119,7 @@ function makeCircle(cx, cy, r, fill, opacity) {
   circle.setAttribute("fill", fill)
   circle.setAttribute("opacity", opacity)
 
-  var canvas = document.getElementById("canvas")
+  var canvas = document.getElementById("canvas3")
   canvas.appendChild(circle)
   return circle
 }
@@ -143,7 +133,7 @@ function makeRect(x, y, width, height, fill, opacity) {
   rect.setAttribute("fill", fill)
   rect.setAttribute("opacity", opacity)
 
-  var canvas = document.getElementById("canvas")
+  var canvas = document.getElementById("canvas3")
   canvas.appendChild(rect)
   return rect
 }
@@ -157,7 +147,7 @@ function makeEllipse(cx, cy, rx, ry, fill, opacity) {
   ellipse.setAttribute("fill", fill)
   ellipse.setAttribute("opacity", opacity)
 
-  var canvas = document.getElementById("canvas")
+  var canvas = document.getElementById("canvas3")
   canvas.appendChild(ellipse)
   return ellipse
 }
@@ -172,7 +162,7 @@ function makeLine(x1, y1, x2, y2, stroke, strokeWidth, opacity) {
   line.setAttribute("stroke-width", strokeWidth)
   line.setAttribute("opacity", opacity)
 
-  var canvas = document.getElementById("canvas")
+  var canvas = document.getElementById("canvas3")
   canvas.appendChild(line)
   return line
 }
@@ -185,7 +175,7 @@ function makePolyline(points, stroke, strokeWidth, opacity) {
   polyline.setAttribute("opacity", opacity)
   polyline.setAttribute("fill", "none")
 
-  var canvas = document.getElementById("canvas")
+  var canvas = document.getElementById("canvas3")
   canvas.appendChild(polyline)
   return polyline
 }
@@ -196,7 +186,7 @@ function makePolygon(points, fill, opacity) {
   polygon.setAttribute("opacity", opacity)
   polygon.setAttribute("fill", fill)
 
-  var canvas = document.getElementById("canvas")
+  var canvas = document.getElementById("canvas3")
   canvas.appendChild(polygon)
   return polygon
 }
@@ -211,7 +201,7 @@ function makeText(message, x, y, fontSize, fontFamily, fill, opacity) {
   text.setAttribute("fill", fill)
   text.setAttribute("opacity", opacity)
 
-  var canvas = document.getElementById("canvas")
+  var canvas = document.getElementById("canvas3")
   canvas.appendChild(text)
   return text
 }
@@ -225,7 +215,7 @@ function makeImage(url, x, y, width, height, opacity) {
   image.setAttribute("height", height)
   image.setAttribute("opacity", opacity)
 
-  var canvas = document.getElementById("canvas")
+  var canvas = document.getElementById("canvas3")
   canvas.appendChild(image)
   return image
 }
